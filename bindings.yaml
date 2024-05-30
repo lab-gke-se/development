@@ -1,0 +1,6 @@
+bindings:
+- members:
+  - serviceAccount:814096468225@cloudservices.gserviceaccount.com
+  - serviceAccount:service-814096468225@container-engine-robot.iam.gserviceaccount.com
+  role: roles/compute.networkUser
+etag: ACAB
