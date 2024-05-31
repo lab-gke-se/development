@@ -5,18 +5,6 @@ subnets = {
     ip_cidr_range            = "10.0.4.0/22"
     private_ip_google_access = true
   }
-  dev-tenant-1-master = {
-    name                     = "dev-tenant-1-master"
-    region                   = "europe-west2"
-    ip_cidr_range            = "10.60.0.0/17"
-    private_ip_google_access = true
-  }
-  dev-tenant-1-nodes = {
-    name                     = "dev-tenant-1-nodes"
-    region                   = "europe-west2"
-    ip_cidr_range            = "10.61.0.0/28"
-    private_ip_google_access = true
-  }
 }
 
 secondary_ranges = {
@@ -37,7 +25,7 @@ networks = {
   dev-network = {
     shared_vpc_host       = false
     routing_mode          = "REGIONAL"
-    delete_default_routes = false
+    delete_default_routes = true
     subnetworks = {
       dev-tenant-1 = {
         ip_cidr_range         = "10.0.4.0/22"
@@ -48,13 +36,14 @@ networks = {
           dev-tenant-1-pods     = "10.0.32.0/20"
         }
       }
-      dev-tenent-1-master = {
-        ip_cidr_range = "10.60.0.0/17"
-        region        = "europe-west2"
-      }
-      dev-tenent-1-nodes = {
-        ip_cidr_range = "10.61.0.0/28"
-        region        = "europe-west2"
+      tenant-gke = {
+        ip_cidr_range         = "100.88.1.0/25"
+        region                = "us-east4"
+        subnet_private_access = true
+        secondary_ip_ranges = {
+          tenant-gke-services = "240.0.36.0/22"
+          tenant-gke-pods     = "240.0.64.0/19"
+        }
       }
     }
   }
