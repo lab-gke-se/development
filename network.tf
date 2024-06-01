@@ -18,8 +18,3 @@ module "subnets" {
 
   depends_on = [module.network]
 }
-
-moved {
-  from = module.subnets["dev-network"].google_compute_subnetwork.subnetwork["dev-tenant-1-europe-west2"]
-  to   = module.subnets["dev-network"].google_compute_subnetwork.subnetwork["dev-tenant-1"]
-}
