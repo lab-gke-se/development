@@ -31,6 +31,11 @@ networks = {
           tenant-gke-pods     = "240.1.64.0/19"
         }
       }
+      cspna-proxy = {
+        ip_cidr_range            = "162.124.14.0/24"
+        region                   = "us-east4"
+        private_ip_google_access = true
+      }
     }
   }
 }
