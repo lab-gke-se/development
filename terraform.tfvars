@@ -1,10 +1,10 @@
 networks = {
   onpremise = {
-    shared_vpc_host        = false
-    routing_mode           = "REGIONAL"
-    deleted_default_routes = true
+    shared_vpc_host       = false
+    routing_mode          = "REGIONAL"
+    delete_default_routes = true
     subnetworks = {
-      proxy = {
+      pupi = {
         ip_cidr_range            = "161.124.14.0/24"
         region                   = "us-east4"
         private_ip_google_access = true
@@ -60,12 +60,12 @@ networks = {
           tenant-gke-pods     = "240.1.64.0/19"
         }
       }
-      # proxy = {
-      #   ip_cidr_range            = "162.124.14.0/24"
-      #   region                   = "us-east4"
-      #   private_ip_google_access = true
-      #   secondary_ip_ranges      = {}
-      # }
+      proxy = {
+        ip_cidr_range            = "162.124.14.0/24"
+        region                   = "us-east4"
+        private_ip_google_access = true
+        secondary_ip_ranges      = {}
+      }
     }
   }
 }
