@@ -1,6 +1,6 @@
 module "network" {
   for_each = var.networks
-  source   = "github.com/lab-gke-se/modules//network//vpc?ref=0.0.1"
+  source   = "github.com/lab-gke-se/modules//network/vpc?ref=main"
   project  = local.projects.prj_dev_network.project_id
   name     = each.key
   # description     = "The development shared network"
@@ -11,7 +11,7 @@ module "network" {
 
 module "subnets" {
   for_each = var.networks
-  source   = "github.com/lab-gke-se/modules//network//subnets?ref=main"
+  source   = "github.com/lab-gke-se/modules//network/subnets?ref=main"
   project  = local.projects.prj_dev_network.project_id
   network  = module.network[each.key].id
   subnets  = each.value.subnetworks
