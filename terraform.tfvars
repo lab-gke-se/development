@@ -1,4 +1,24 @@
 networks = {
+  onpremise = {
+    shared_vpc_host       = false
+    routing_mode          = "REGIONAL"
+    delete_default_routes = true
+    subnetworks = {
+      pupi = {
+        ip_cidr_range            = "161.124.14.0/24"
+        region                   = "us-east4"
+        private_ip_google_access = true
+        secondary_ip_ranges      = {}
+      }
+      vdi = {
+        ip_cidr_range            = "10.10.2.0/24"
+        region                   = "us-east4"
+        private_ip_google_access = true
+        secondary_ip_ranges      = {}
+      }
+    }
+  }
+
   dev-network = {
     shared_vpc_host       = false
     routing_mode          = "REGIONAL"
