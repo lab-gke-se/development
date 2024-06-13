@@ -137,7 +137,7 @@ resource "google_compute_router_peer" "dev_network_onpremise_2" {
 resource "google_compute_router_peer" "onpremise_dev_network_1" {
   project                   = local.projects.prj_dev_network.project_id
   name                      = "onpremise-dev-network-peer-1"
-  router                    = google_compute_router.dev_network_router.name
+  router                    = google_compute_router.onpremise_router.name
   region                    = "us-east4"
   peer_ip_address           = "169.254.0.1"
   peer_asn                  = 64514
@@ -148,7 +148,7 @@ resource "google_compute_router_peer" "onpremise_dev_network_1" {
 resource "google_compute_router_peer" "onpremise_dev_network_2" {
   project                   = local.projects.prj_dev_network.project_id
   name                      = "onpremise-dev-network-peer-2"
-  router                    = google_compute_router.dev_network_router.name
+  router                    = google_compute_router.onpremise_router.name
   region                    = "us-east4"
   peer_ip_address           = "169.254.1.2"
   peer_asn                  = 64514
