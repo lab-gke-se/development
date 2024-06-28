@@ -1,0 +1,15 @@
+name: gke-tenant-gke-cluster-403ebcd6-exkubelet
+network: projects/lab-gke-se/global/networks/dev-network
+disabled: false
+priority: 998
+direction: INGRESS
+denied:
+- IPProtocol: tcp
+  ports:
+  - '10255'
+sourceRanges:
+- 0.0.0.0/0
+targetTags:
+- gke-tenant-gke-cluster-403ebcd6-node
+logConfig:
+  enable: true

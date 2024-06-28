@@ -1,0 +1,14 @@
+name: dev-tenant-1-ai-iap
+network: projects/lab-gke-se/global/networks/dev-network
+description: IAP ingress to ssh
+disabled: false
+priority: 1000
+direction: INGRESS
+allowed:
+- IPProtocol: tcp
+  ports:
+  - '22'
+sourceRanges:
+- 35.235.240.0/20
+logConfig:
+  enable: true

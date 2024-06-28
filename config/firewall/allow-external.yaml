@@ -1,0 +1,12 @@
+name: allow-external
+network: projects/lab-gke-se/global/networks/dev-network
+disabled: false
+direction: EGRESS
+priority: 997
+allowed:
+- IPProtocol: all
+destinationRanges:
+- 0.0.0.0/0
+logConfig:
+  enable: true
+  metadata: INCLUDE_ALL_METADATA

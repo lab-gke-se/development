@@ -1,0 +1,12 @@
+name: block-all
+network: projects/lab-gke-se/global/networks/onpremise
+disabled: true
+priority: 65535
+direction: EGRESS
+denied:
+- IPProtocol: all
+destinationRanges:
+- 0.0.0.0/0
+logConfig:
+  enable: true
+  metadata: INCLUDE_ALL_METADATA
