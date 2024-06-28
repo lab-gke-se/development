@@ -1,0 +1,15 @@
+name: allow-control-plane
+network: projects/lab-gke-se/global/networks/onpremise
+disabled: false
+priority: 997
+direction: EGRESS
+allowed:
+- IPProtocol: all
+destinationRanges:
+- 100.88.1.12
+- 0.0.0.0/0
+sourceRanges:
+- 161.124.14.0/24
+logConfig:
+  enable: true
+  metadata: INCLUDE_ALL_METADATA

@@ -1,0 +1,15 @@
+name: allow-pupi
+network: projects/lab-gke-se/global/networks/onpremise
+disabled: false
+priority: 997
+direction: INGRESS
+allowed:
+- IPProtocol: all
+destinationRanges:
+- 161.124.14.0/24
+- 10.10.2.0/24
+sourceRanges:
+- 0.0.0.0/0
+logConfig:
+  enable: true
+  metadata: INCLUDE_ALL_METADATA

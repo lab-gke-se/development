@@ -11,4 +11,9 @@ locals {
   location         = data.terraform_remote_state.bootstrap.outputs.location
 
   prj_dev_network_services = []
+
+  substitutions = {}
+
+  firewall_files   = fileset("${path.module}/config/firewall", "*.yaml")
+  firewall_configs = { for filename in local.firewall_files : replace(filename, ".yaml", "") => yamldecode(templatefile("${path.module}/config/firewall/${filename}", local.substitutions)) }
 }

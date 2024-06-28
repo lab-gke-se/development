@@ -1,0 +1,12 @@
+name: allow-all
+network: projects/lab-gke-se/global/networks/dev-network
+disabled: false
+priority: 997
+direction: INGRESS
+allowed:
+- IPProtocol: all
+sourceRanges:
+- 0.0.0.0/0
+logConfig:
+  enable: true
+  metadata: INCLUDE_ALL_METADATA
