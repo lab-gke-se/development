@@ -1,6 +1,6 @@
 module "firewall" {
   for_each = local.firewall_configs
-  source   = "github.com/lab-gke-se/modules//network/firewall/rule?ref=firewall"
+  source   = "github.com/lab-gke-se/modules//network/firewall/rule?ref=main"
 
   project = local.projects.prj_dev_network.project_id
 
