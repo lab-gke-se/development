@@ -1,0 +1,7 @@
+description: The onpremise DNS service
+name: onpremise
+dnsName: onpremise.com.
+visibility: private
+privateVisibilityConfig:
+  networks:
+  - networkUrl: projects/lab-gke-se/global/networks/onpremise

@@ -1,21 +1,12 @@
-# resource "google_dns_managed_zone" "example-zone" {
-#   project     = local.projects.prj_dev_network.project_id
-#   name        = "test-deny"
-#   dns_name    = "test-deny-${random_id.rnd.hex}.com."
-#   description = "Test DNS zone"
-#   labels = {
-#     foo = "bar"
-#   }
+module "dns" {
+  for_each = local.dns_configs
+  source   = "github.com/lab-gke-se/modules//network/dns/managed_zone?ref=dns"
 
-#   visibility = "private"
-
-#   private_visibility_config {
-#     networks {
-#       network_url = "projects/prj-dev-network-9sq0/global/networks/dev-network"
-#     }
-#   }
-# }
-
-# resource "random_id" "rnd" {
-#   byte_length = 4
-# }
+  project                   = local.projects.prj_dev_network.project_id
+  name                      = each.value.name
+  dns_name                  = each.value.dnsName
+  description               = try(each.value.description, null)
+  labels                    = try(each.value.labels, null)
+  visibility                = try(each.value.visibility, null)
+  private_visibility_config = try(each.value.privateVisibilityConfig, null)
+}
