@@ -1,0 +1,7 @@
+description: The dev-network service
+name: dev-network
+dnsName: dev-network.com.
+visibility: private
+privateVisibilityConfig:
+  networks:
+  - networkUrl: projects/lab-gke-se/global/networks/dev-network
