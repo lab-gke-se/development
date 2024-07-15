@@ -60,6 +60,15 @@ networks = {
           tenant-gke-pods     = "240.1.64.0/19"
         }
       }
+      tenant-gke-standard = {
+        ip_cidr_range            = "100.88.3.0/25"
+        region                   = "us-east4"
+        private_ip_google_access = true
+        secondary_ip_ranges = {
+          tenant-gke-services = "240.3.36.0/22"
+          tenant-gke-pods     = "240.3.64.0/19"
+        }
+      }
       proxy = {
         ip_cidr_range            = "162.124.14.0/24"
         region                   = "us-east4"
