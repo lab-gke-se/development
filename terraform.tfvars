@@ -74,8 +74,8 @@ networks = {
         region                   = "us-central1"
         private_ip_google_access = true
         secondary_ip_ranges = {
-          tenant-gke-services = "240.4.36.0/22"
-          tenant-gke-pods     = "240.4.64.0/19"
+          tenant-gke-services = "240.5.36.0/22"
+          tenant-gke-pods     = "240.5.64.0/19"
         }
       }
       proxy = {
