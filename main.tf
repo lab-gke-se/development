@@ -14,9 +14,13 @@ locals {
 
   substitutions = {}
 
-  firewall_files = fileset("${path.module}/config/firewall", "*.yaml")
-  dns_files      = fileset("${path.module}/config/dns", "*.yaml")
+  network_files    = fileset("${path.module}/config/network", "*.yaml")
+  subnetwork_files = fileset("${path.module}/config/subnetwork", "*.yaml")
+  firewall_files   = fileset("${path.module}/config/firewall", "*.yaml")
+  dns_files        = fileset("${path.module}/config/dns", "*.yaml")
 
-  firewall_configs = { for filename in local.firewall_files : replace(filename, ".yaml", "") => yamldecode(templatefile("${path.module}/config/firewall/${filename}", local.substitutions)) }
-  dns_configs      = { for filename in local.dns_files : replace(filename, ".yaml", "") => yamldecode(templatefile("${path.module}/config/dns/${filename}", local.substitutions)) }
+  network_configs    = { for filename in local.network_files : replace(filename, ".yaml", "") => yamldecode(templatefile("${path.module}/config/network/${filename}", local.substitutions)) }
+  subnetwork_configs = { for filename in local.subnetwork_files : replace(filename, ".yaml", "") => yamldecode(templatefile("${path.module}/config/subnetwork/${filename}", local.substitutions)) }
+  firewall_configs   = { for filename in local.firewall_files : replace(filename, ".yaml", "") => yamldecode(templatefile("${path.module}/config/firewall/${filename}", local.substitutions)) }
+  dns_configs        = { for filename in local.dns_files : replace(filename, ".yaml", "") => yamldecode(templatefile("${path.module}/config/dns/${filename}", local.substitutions)) }
 }

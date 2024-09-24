@@ -1,0 +1,25 @@
+autoCreateSubnetworks: false
+creationTimestamp: '2024-05-30T07:01:07.313-07:00'
+id: '4105857771641321548'
+kind: compute#network
+name: dev-network
+networkFirewallPolicyEnforcementOrder: AFTER_CLASSIC_FIREWALL
+routingConfig:
+  routingMode: REGIONAL
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/dev-network
+selfLinkWithId: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/4105857771641321548
+subnetworks:
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/proxy
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/int-alb-proxy-subnet
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke-standard-1
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-central1/subnetworks/tenant-gke-us-central1
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke-standard-0
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke-standard
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke-1
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/gke-standard-cluster-1-c3c250a6-pe-subnet
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/dev-tenant-1
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/gke-standard-cluster-0-39dd3405-pe-subnet
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke-private
+x_gcloud_bgp_routing_mode: REGIONAL
+x_gcloud_subnet_mode: CUSTOM

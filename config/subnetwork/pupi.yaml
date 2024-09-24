@@ -1,0 +1,20 @@
+creationTimestamp: '2024-06-13T12:21:16.287-07:00'
+enableFlowLogs: false
+fingerprint: Q6as6KR8b3o=
+gatewayAddress: 161.124.14.1
+id: '9020192435854571587'
+ipCidrRange: 161.124.14.0/24
+kind: compute#subnetwork
+logConfig:
+  aggregationInterval: INTERVAL_5_SEC
+  enable: false
+  flowSampling: 0.5
+  metadata: INCLUDE_ALL_METADATA
+name: pupi
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/onpremise
+privateIpGoogleAccess: true
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: PRIVATE
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/pupi
+stackType: IPV4_ONLY

@@ -1,0 +1,20 @@
+creationTimestamp: '2024-06-03T05:45:50.455-07:00'
+enableFlowLogs: false
+fingerprint: y1P6i0iChuc=
+gatewayAddress: 162.124.14.1
+id: '9037929435313996817'
+ipCidrRange: 162.124.14.0/24
+kind: compute#subnetwork
+logConfig:
+  aggregationInterval: INTERVAL_5_SEC
+  enable: false
+  flowSampling: 0.5
+  metadata: INCLUDE_ALL_METADATA
+name: proxy
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/dev-network
+privateIpGoogleAccess: true
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: PRIVATE
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/proxy
+stackType: IPV4_ONLY

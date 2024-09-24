@@ -1,0 +1,5 @@
+autoCreateSubnetworks: false
+name: dev-network
+networkFirewallPolicyEnforcementOrder: AFTER_CLASSIC_FIREWALL
+routingConfig:
+  routingMode: REGIONAL

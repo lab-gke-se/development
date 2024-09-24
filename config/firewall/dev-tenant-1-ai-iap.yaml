@@ -10,5 +10,3 @@ allowed:
   - '22'
 sourceRanges:
 - 35.235.240.0/20
-logConfig:
-  enable: true
