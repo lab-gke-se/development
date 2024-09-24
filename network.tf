@@ -1,7 +1,7 @@
 module "network" {
   for_each = local.network_configs
   # source   = "github.com/lab-gke-se/modules//network/vpc?ref=main"
-  source = "github.com/lab-gke-se/modules//network/vpc"
+  source = "github.com/lab-gke-se/modules//network/vpc?ref=feature%2Fnetwork"
 
   project               = local.projects.prj_dev_network.project_id
   shared_vpc_host       = false
@@ -19,7 +19,7 @@ module "network" {
 
 module "subnetwork" {
   for_each = local.subnetwork_configs
-  source   = "github.com/lab-gke-se/modules//network/subnetwork"
+  source   = "github.com/lab-gke-se/modules//network/subnetwork?ref=feature%2Fnetwork"
 
   project                 = local.projects.prj_dev_network.project_id
   network                 = each.value.network
