@@ -1,0 +1,15 @@
+creationTimestamp: '2024-09-21T07:41:32.102-07:00'
+description: Control Plane Endpoint Subnetwork
+fingerprint: cqaW-fnwsHA=
+gatewayAddress: 100.88.5.161
+id: '818423235573147123'
+ipCidrRange: 100.88.5.160/28
+kind: compute#subnetwork
+name: gke-standard-cluster-0-39dd3405-pe-subnet
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/dev-network
+privateIpGoogleAccess: false
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: PRIVATE
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/gke-standard-cluster-0-39dd3405-pe-subnet
+stackType: IPV4_ONLY

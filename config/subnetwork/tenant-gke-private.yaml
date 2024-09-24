@@ -1,0 +1,25 @@
+creationTimestamp: '2024-06-01T06:06:57.761-07:00'
+enableFlowLogs: false
+fingerprint: g3qA4OLzLQs=
+gatewayAddress: 10.10.1.1
+id: '8324947387956503070'
+ipCidrRange: 10.10.1.0/25
+kind: compute#subnetwork
+logConfig:
+  aggregationInterval: INTERVAL_5_SEC
+  enable: false
+  flowSampling: 0.5
+  metadata: INCLUDE_ALL_METADATA
+name: tenant-gke-private
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/dev-network
+privateIpGoogleAccess: true
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: PRIVATE
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+secondaryIpRanges:
+- ipCidrRange: 240.1.64.0/19
+  rangeName: tenant-gke-pods
+- ipCidrRange: 240.1.36.0/22
+  rangeName: tenant-gke-services
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke-private
+stackType: IPV4_ONLY

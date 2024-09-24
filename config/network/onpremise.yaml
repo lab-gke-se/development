@@ -1,0 +1,15 @@
+autoCreateSubnetworks: false
+creationTimestamp: '2024-06-13T12:20:42.369-07:00'
+id: '7348718411247450213'
+kind: compute#network
+name: onpremise
+networkFirewallPolicyEnforcementOrder: AFTER_CLASSIC_FIREWALL
+routingConfig:
+  routingMode: REGIONAL
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/onpremise
+selfLinkWithId: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/7348718411247450213
+subnetworks:
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/pupi
+- https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/vdi
+x_gcloud_bgp_routing_mode: REGIONAL
+x_gcloud_subnet_mode: CUSTOM

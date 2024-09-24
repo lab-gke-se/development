@@ -1,0 +1,17 @@
+creationTimestamp: '2024-07-02T04:07:20.736-07:00'
+description: proxy-only subnet for internal regional ALB
+fingerprint: k7kitjDC-7c=
+gatewayAddress: 10.10.2.1
+id: '7323566481456652679'
+ipCidrRange: 10.10.2.0/23
+kind: compute#subnetwork
+name: int-alb-proxy-subnet
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/dev-network
+privateIpGoogleAccess: false
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: REGIONAL_MANAGED_PROXY
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+role: ACTIVE
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/int-alb-proxy-subnet
+stackType: IPV4_ONLY
+state: READY

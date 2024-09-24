@@ -1,0 +1,20 @@
+creationTimestamp: '2024-06-13T12:21:16.166-07:00'
+enableFlowLogs: false
+fingerprint: AqOYx5B20rc=
+gatewayAddress: 10.10.2.1
+id: '8617314771093878851'
+ipCidrRange: 10.10.2.0/24
+kind: compute#subnetwork
+logConfig:
+  aggregationInterval: INTERVAL_5_SEC
+  enable: false
+  flowSampling: 0.5
+  metadata: INCLUDE_ALL_METADATA
+name: vdi
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/onpremise
+privateIpGoogleAccess: true
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: PRIVATE
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/vdi
+stackType: IPV4_ONLY

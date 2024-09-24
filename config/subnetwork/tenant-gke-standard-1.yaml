@@ -1,0 +1,25 @@
+creationTimestamp: '2024-09-18T09:07:28.347-07:00'
+enableFlowLogs: false
+fingerprint: Z6h4YiUuQ4Q=
+gatewayAddress: 100.88.6.1
+id: '8412544839379797039'
+ipCidrRange: 100.88.6.0/25
+kind: compute#subnetwork
+logConfig:
+  aggregationInterval: INTERVAL_5_SEC
+  enable: false
+  flowSampling: 0.5
+  metadata: INCLUDE_ALL_METADATA
+name: tenant-gke-standard-1
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/dev-network
+privateIpGoogleAccess: true
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: PRIVATE
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+secondaryIpRanges:
+- ipCidrRange: 240.6.64.0/19
+  rangeName: tenant-gke-pods
+- ipCidrRange: 240.6.36.0/22
+  rangeName: tenant-gke-services
+selfLink: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4/subnetworks/tenant-gke-standard-1
+stackType: IPV4_ONLY

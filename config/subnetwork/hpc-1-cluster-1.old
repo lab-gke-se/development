@@ -1,0 +1,20 @@
+enableFlowLogs: false
+# gatewayAddress: 10.10.1.1
+ipCidrRange: 10.0.0.0/16
+logConfig:
+  aggregationInterval: INTERVAL_5_SEC
+  enable: false
+  flowSampling: 0.5
+  metadata: INCLUDE_ALL_METADATA
+name: hpc-cluster-1
+network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/hpc
+privateIpGoogleAccess: true
+privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
+purpose: PRIVATE
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+secondaryIpRanges:
+- ipCidrRange: 240.1.64.0/19
+  rangeName: tenant-gke-pods
+- ipCidrRange: 240.1.36.0/22
+  rangeName: tenant-gke-services
+stackType: IPV4_ONLY
