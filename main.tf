@@ -10,7 +10,15 @@ locals {
   service_accounts = data.terraform_remote_state.bootstrap.outputs.service_accounts
   location         = data.terraform_remote_state.bootstrap.outputs.location
 
-  prj_dev_network_services = []
+  hpc_1_kms_services = [
+    "artifactregistry.googleapis.com",
+    "cloudfunctions.googleapis.com",
+    "compute.googleapis.com",
+    "container.googleapis.com",
+    "pubsub.googleapis.com",
+    "secretmanager.googleapis.com",
+    "storage.googleapis.com"
+  ]
 
   substitutions = {}
 
