@@ -6,7 +6,7 @@ logConfig:
   enable: false
   flowSampling: 0.5
   metadata: INCLUDE_ALL_METADATA
-name: hpc-1-standard-1
+name: hpc-1-cluster-2
 network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networks/hpc-1
 privateIpGoogleAccess: true
 privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
