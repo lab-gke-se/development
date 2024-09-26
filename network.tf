@@ -34,4 +34,6 @@ module "subnetwork" {
   externalIpv6Prefix      = try(each.value.externalIpv6Prefix, null)
   secondaryIpRanges       = try(each.value.secondaryIpRanges, null)
   logConfig               = try(each.value.logConfig, null)
+
+  depends_on = [module.network]
 }

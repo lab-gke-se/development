@@ -1,5 +1,0 @@
-autoCreateSubnetworks: false
-name: hpc-1
-networkFirewallPolicyEnforcementOrder: AFTER_CLASSIC_FIREWALL
-routingConfig:
-  routingMode: REGIONAL
