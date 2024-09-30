@@ -1,4 +1,5 @@
 autoCreateSubnetworks: false
+mtu: 8896
 name: hpc-1
 networkFirewallPolicyEnforcementOrder: AFTER_CLASSIC_FIREWALL
 routingConfig:
