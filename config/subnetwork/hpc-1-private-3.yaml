@@ -11,5 +11,5 @@ network: https://www.googleapis.com/compute/v1/projects/lab-gke-se/global/networ
 privateIpGoogleAccess: true
 privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
 purpose: PRIVATE
-region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
+region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-central1
 
