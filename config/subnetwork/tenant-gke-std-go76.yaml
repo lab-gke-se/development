@@ -1,5 +1,4 @@
 enableFlowLogs: false
-# gatewayAddress: 10.10.1.1
 ipCidrRange: 10.11.0.0/16
 logConfig:
   aggregationInterval: INTERVAL_5_SEC
@@ -13,8 +12,8 @@ privateIpv6GoogleAccess: DISABLE_GOOGLE_ACCESS
 purpose: PRIVATE
 region: https://www.googleapis.com/compute/v1/projects/lab-gke-se/regions/us-east4
 secondaryIpRanges:
-- ipCidrRange: 240.11.64.0/19
+- ipCidrRange: 240.12.64.0/19
   rangeName: gke-pods
-- ipCidrRange: 240.11.36.0/22
+- ipCidrRange: 240.12.36.0/22
   rangeName: gke-services
 stackType: IPV4_ONLY
