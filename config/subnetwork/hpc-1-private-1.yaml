@@ -3,7 +3,7 @@ enableFlowLogs: false
 ipCidrRange: 10.100.1.0/28
 logConfig:
   aggregationInterval: INTERVAL_5_SEC
-  enable: false
+  enable: true
   flowSampling: 0.5
   metadata: INCLUDE_ALL_METADATA
 name: hpc-1-private-1
